@@ -11,6 +11,9 @@
 \setmonofont{Meslo LG L for Powerline}
 % \crefname{questionCounter}{Good}{Note}
 
+% Used for automatic embracing the text with brackets
+\usepackage{xstring}
+
 % DEFINE MATH MACROS
 % \newcommand{\qed}{\hfill\rule{2mm}{2mm}}
 \DeclareMathOperator*{\argmax}{arg\,max}
@@ -87,6 +90,14 @@
 }{%
   \end{array}\right]
 }
-% \newcommand{\ans}{\text{Answer:}} % Answer
+% \newcommand{\ans}{\text{Answer: }} % Answer
 % \newcommand{\rop}[1]{\stackrel{\substack{#1}}{\to}} % row operation
 \newcommand{\rop}[1]{\xrightarrow{\substack{#1}}} % row operation
+
+\newcommand{\tp}[1]{%
+\StrLen{#1}[\mylength]%
+\ifnum\mylength>1%
+    (#1)^T%
+\else%
+    #1^T%
+\fi} % transpose

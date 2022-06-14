@@ -135,6 +135,90 @@
 
 
     \question
+    In this question, we could use partition matrix:
+    \begin{equation}
+        AB=
+        \left[\begin{array}{cc|cc}
+        1 & 0 & a & b \\ 
+        0 & 1 & c & d
+        \end{array}\right]
+        \left[\begin{array}{cc}
+        -a & -b \\ 
+        -c & -d \\ 
+        \hline
+        1 & 0 \\ 
+        0 & 1
+        \end{array}\right]=
+        \left[\begin{array}{cc}
+        -a & -b \\ 
+        -c & -d
+        \end{array}\right]+
+        \left[\begin{array}{cc}
+        a & b \\ 
+        c & d
+        \end{array}\right]=
+        \left[\begin{array}{cc}
+        0 & 0 \\ 
+        0 & 0
+        \end{array}\right]
+    \end{equation}
+    \begin{equation}
+        BA=
+        \left[\begin{array}{cc}
+        -a & -b \\ 
+        -c & -d \\ 
+        \hline
+        0 & 0 \\ 
+        -1 & 1
+        \end{array}\right]
+        \left[\begin{array}{cc|cc}
+        1 & 0 & a & b \\ 
+        0 & 1 & c & d
+        \end{array}\right]=
+        \left[\begin{array}{cccc}
+        -a & --b & -a^2-bc & -ab-bd \\ 
+        -c & -d & -ac-cd & -bc-d^2 \\ 
+        1 & 0 & a & b \\ 
+        0 & 1 & c & d
+        \end{array}\right]
+    \end{equation}
     
+    \question
+    \begin{arabicparts}
+        \questionpart
+        \begin{multline}
+            A^2-B^2\\
+            =A\cdot A+B\cdot B\\
+            =\tp{A}\cdot\tp{A}-\tp{B}\cdot\tp{B}\\
+            =\tp{A\cdot A}-\tp{B\cdot B}\\
+            =\tp{(A^2)-(B^2)}
+        \end{multline}
+        , so it is symmetric.
+
+        \questionpart
+        Let $\LHS=(A+B)(A-B)$ and $\RHS=[(A+B)(A-B)]^T$, then
+        \begin{equation}
+            \RHS
+            =(A-B)^T(A+B)^T
+            =(A^T-B^T)(A^T-B^T)
+            =(A-B)(A+B)
+            \neq\LHS
+        \end{equation}
+        , so it is not symmetric.
+        
+        \questionpart
+        Let $\LHS=ABA$ and $\RHS=(ABA)^T$, then
+        \begin{equation}
+            \RHS=(BA)^TA^T=A^TB^TA^T=ABA=\LHS
+        \end{equation}
+        , so it is symmetric.
+
+        \questionpart
+        Let $\LHS=ABAB$ and $\RHS=(ABAB)^T$, then
+        \begin{equation}
+            \RHS=(AB)^T(AB)^T=B^TA^TB^TA^T=BABA\neq\LHS
+        \end{equation}  
+        , so it is not symmetric.
+    \end{arabicparts}
 \end{document}
 
