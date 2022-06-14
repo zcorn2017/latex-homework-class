@@ -8,6 +8,8 @@
 \newcommand{\hwlecture}{0}
 \newcommand{\hwsection}{Z}
 
+\input{preamble.tex}
+
 % This is just used to generate filler content. You don't need it in an actual
 % homework!
 \usepackage{lipsum}
@@ -22,7 +24,7 @@
 
 \question
   This question's number will be auto-incremented.
-
+  OKfaefwalfdjffdsf
   \lipsum[2]
 
 \question*{Super Fancy Named Question}
@@ -54,13 +56,19 @@
 
   Therefore, we have proven the claim by induction in the \texttt{induction} environment.
 
-\question
+\question\label{q5}
   Use the arabicparts environment to include the questionCounter number in the list.
   \begin{arabicparts}
     \questionpart Use \LaTeX
+    \begin{enumerate}
+      \item a
+      \item b
+    \end{enumerate}
     \questionpart ???
     \questionpart Profit!
   \end{arabicparts}
+  Quwston \cref{q5}
+
 
   \lipsum[7]
 
@@ -109,14 +117,17 @@
   You can still do things like nesting lists inside of these environments.
   \begin{alphaparts}
     \questionpart Use \LaTeX
-      \begin{enumerate}
-        \item Open terminal
+      \begin{enumerate}\label{subq}
+        \item\label{i1} Open terminal
         \item Open vim
         \item Write LaTeX
       \end{enumerate}
     \questionpart ???
     \questionpart Profit!
   \end{alphaparts}
+  \cref{subq}
+  \cref{i1}
+
 
   \lipsum[9]
 
@@ -139,5 +150,5 @@
   The starred \texttt{section*} works as well.
 
   \lipsum[11]
-
+  
 \end{document}

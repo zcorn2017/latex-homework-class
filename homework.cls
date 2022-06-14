@@ -46,7 +46,8 @@
 \ifthenelse{\equal{\@oplargemargins}{1}}{}{\RequirePackage{fullpage}}
 
 % Links
-\RequirePackage{hyperref}
+\RequirePackage[colorlinks]{hyperref}
+\RequirePackage{cleveref}
 
 % ----- Questions -------------------------------------------------------------
 \newcounter{questionCounter}

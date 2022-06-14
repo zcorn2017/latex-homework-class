@@ -1,0 +1,92 @@
+% DEFINE ADDITIONAL MACROS
+\newcommand\note{\textit{Note:\hspace{0.75cm}}}
+\newcommand{\TODO}{\colorbox{red}{NOT DOING YET!}}
+\newcommand{\claim}{\textit{\frame{Claim:}\hspace{0.75cm}}}
+\newcommand{\recall}{\textit{\frame{Recall:}\hspace{0.75cm}}}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont{OpenDyslexic3}
+\setmainfont{Atkinson Hyperlegible}
+\setmonofont{Meslo LG L for Powerline}
+% \crefname{questionCounter}{Good}{Note}
+
+% DEFINE MATH MACROS
+% \newcommand{\qed}{\hfill\rule{2mm}{2mm}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\LHS}{LHS}
+\DeclareMathOperator*{\RHS}{RHS}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\myrightarrow}[1]{\mathrel{\raisebox{-2pt}{$\xrightarrow{#1}$}}}
+
+
+% Other commands
+\newcommand\st{\quad\text{s.t.}\quad}
+\newcommand\E{\mathbb{E}} % expectation
+\newcommand\F{\mathbb{F}} % fields
+\newcommand\R{\mathbb{R}} % real
+\newcommand\Q{\mathbb{Q}} % quadratic
+\newcommand\Z{\mathbb{Z}} % integer
+\newcommand\N{\mathbb{N}} % natural
+\newcommand\bbC{\mathbb{C}} % complex
+\newcommand\bbI{\mathbb{I}} % index function
+\newcommand\bbS{\mathbb{S}}
+\newcommand\calR{\mathcal{R}} % integrability
+\newcommand\calF{\mathcal{F}} % family
+\newcommand\calA{\mathcal{A}} % algebra
+\newcommand\calB{\mathcal{B}} % Borel algebra
+\newcommand\calM{\mathcal{M}}
+\newcommand\bfi{\mathbf{i}}
+\newcommand\bfj{\mathbf{j}}
+\newcommand\bfk{\mathbf{k}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\sumin}{\sum_{i=1}^n}
+\newcommand{\sumiN}{\sum_{i=1}^N}
+\newcommand{\sumiM}{\sum_{i=1}^M}
+\newcommand{\sumjn}{\sum_{j=1}^n}
+\newcommand{\sumjm}{\sum_{j=1}^m}
+\newcommand{\sumil}{\sum_{i=1}^\ell}
+\newcommand{\intab}{\int_{a}^{b}}
+
+% Algebra
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\im}{\operatorname{im}}
+\renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\opNull}{\operatorname{null}}
+\newcommand{\range}{\operatorname{range}}
+
+% Analysis
+\newcommand\simpleS{\boldsymbol{s}} % simple function
+\newcommand{\ptwto}{\mathrel{\raisebox{-4pt}{$\xrightarrow{\text{pointwise}}$}}}
+\newcommand{\unfto}{\mathrel{\raisebox{-4pt}{$\xrightarrow{\text{uniformly}}$}}}
+
+% Machine learning
+\newcommand\LossL{\mathcal{L}} % loss
+\newcommand\RiskR{\mathcal{R}}
+\newcommand\calN{\mathcal{N}} % normal distribution
+\newcommand\calG{\mathcal{G}}
+\newcommand\Var{\operatorname{var}} % variance
+\newcommand\Cov{\operatorname{cov}} % covariance
+\newcommand\Bias{\operatorname{Bias}} % bias
+\newcommand\MSE{\operatorname{MSE}} % MSE loss
+\newcommand{\MultiGaussianPDF}[1]{\frac{1}{\sqrt{(2\pi)^d|\Sigma_{#1}|}} \exp\left(-\frac12 (x-\mu_{#1})^T \Sigma_{#1}^{-1} (x-\mu_{#1})\right)}
+%\newcommand{\algorithmSplit}[1]{\end{algorithmic} #1 \begin{algorithmic}[1]} % OLD TO BE DELETED
+\newcommand{\idx}[1]{^{(#1)}} % superscript
+
+% Linear Algebra
+\renewcommand{\Row}[1]{R_{#1}} % row
+\newcommand{\x}[1]{x_{#1}} % x unknown
+\newenvironment{amatrix}[1]{%
+  \left[\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right]
+}
+% \newcommand{\ans}{\text{Answer:}} % Answer
+% \newcommand{\rop}[1]{\stackrel{\substack{#1}}{\to}} % row operation
+\newcommand{\rop}[1]{\xrightarrow{\substack{#1}}} % row operation
