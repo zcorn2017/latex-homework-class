@@ -1,7 +1,7 @@
 \documentclass[11pt]{homework}
 
 % TODO: replace these with your information
-\newcommand{\hwname}{Yuming Zhou}
+\newcommand{\hwname}{ZHOU Yuming}
 \newcommand{\hwemail}{\href{mailto://121050081@link.cuhk.edu.cn}{121050081@link.cuhk.edu.cn}}
 \newcommand{\hwtype}{Homework}
 \newcommand{\hwnum}{1}
@@ -176,7 +176,7 @@
         0 & 1 & c & d
         \end{array}\right]=
         \left[\begin{array}{cccc}
-        -a & --b & -a^2-bc & -ab-bd \\ 
+        -a & -b & -a^2-bc & -ab-bd \\ 
         -c & -d & -ac-cd & -bc-d^2 \\ 
         1 & 0 & a & b \\ 
         0 & 1 & c & d
@@ -220,5 +220,160 @@
         \end{equation}  
         , so it is not symmetric.
     \end{arabicparts}
+
+    \question
+    \begin{arabicparts}
+        \questionpart
+    
+    \includegraphics{h1q5s1.png}
+
+    No solution.\\
+    \questionpart
+    \begin{equation}
+        \begin{cases}
+            2x+y&=2\\
+            x-y&=2\\
+            x&=\frac{4}{3}
+        \end{cases}
+    \end{equation}
+        \includegraphics{h1q5s2.png}
+
+
+    
+    \end{arabicparts}
+    \question
+    \begin{equation}
+        \left[\begin{array}{cccc}
+        \hlight{a} & 1 & 3 & r \\ 
+        a & a & 4 & s \\ 
+        a & a & 2a & t
+        \end{array}\right]
+        \to
+        \left[\begin{array}{cccc}
+        \hlight{a} & 1 & 3 & r \\ 
+        0 & a-1 & 1 & s-r \\ 
+        0 & a-1 & 2a-3 & t-r
+        \end{array}\right]
+    \end{equation}
+    when $a\neq0$, the elimination fails to give the pivot.
+    \begin{equation}
+        \left[\begin{array}{cccc}
+            \hlight{a} & 1 & 3 & r \\ 
+            0 & a-1 & 1 & s-r \\ 
+            0 & a-1 & 2a-3 & t-r
+            \end{array}\right]
+        \to
+        \left[\begin{array}{cccc}
+        a & 1 & 3 & r \\ 
+        0 & \hlight{a-1} & 1 & s-r \\ 
+        0 & 0 & 2a-4 & t-s
+        \end{array}\right]
+    \end{equation}
+    when $a\neq1$, the elimination fails to give the pivot.
+    \begin{equation}
+        \left[\begin{array}{cccc}
+            a & 1 & 3 & r \\ 
+            0 & a-1 & 1 & s-r \\ 
+            0 & 0 & \hlight{2a-4} & t-s
+            \end{array}\right]
+    \end{equation}
+    when $a\neq2$, the elimination fails to give the pivot.
+
+    Hence,
+    \begin{equation}
+        a=\begin{cases}
+            0\\
+            1\\
+            2
+        \end{cases}
+    \end{equation}
+
+    \question
+    By
+    \begin{equation}
+        ab^T=
+        \left[\begin{array}{cccc}
+        39 & 99 & 420 & 207 \\ 
+        45 & 33 & 782 & 199 \\ 
+        100 & 80 & 49 & 73 \\ 
+        59 & 18 & 75 & 46
+        \end{array}\right]
+        =
+        \left[\begin{array}{cccc}
+        a_1 b_1 & a_1 b_2  & a_1 b_3  & a_1 b_4  \\ 
+        a_2 b_1  & a_2 b_2  & a_2 b_3  & a_2 b_4  \\ 
+        a_3 b_1  & a_3 b_2  & a_3 b_3  & a_3 b_4  \\ 
+        a_4 b_1  & a_4 b_2  & a_4 b_3  & a_4 b_4 
+        \end{array}\right]
+    \end{equation}
+    we could get
+    \begin{equation}
+        a^Tb=a_1 b_1 + a_2 b_2 + a_3 b_3 + a_4 b_4=39+33+49+46=167
+    \end{equation}
+
+    \question
+    \begin{multline}
+        A^3=(ab^T)^3=
+        (\begin{bmatrix}
+        1 \\ 
+        2 \\ 
+        3
+        \end{bmatrix}
+        \cdot
+        \left[\begin{array}{ccc}
+        1 & 1 & 0
+        \end{array}\right]
+        )^3=
+        \left[\begin{array}{ccc}
+        1 & 1 & 0 \\ 
+        2 & 2 & 0 \\ 
+        3 & 3 & 0
+        \end{array}\right]^3\\
+        =
+        \left[\begin{array}{ccc}
+        1 & 1 & 0 \\ 
+        2 & 2 & 0 \\ 
+        3 & 3 & 0
+        \end{array}\right]
+        \left[\begin{array}{ccc}
+        3 & 3 & 0 \\ 
+        6 & 6 & 0 \\ 
+        9 & 9 & 0
+        \end{array}\right]=
+        \left[\begin{array}{ccc}
+        9 & 9 & 0 \\ 
+        18 & 18 & 0 \\ 
+        27 & 27 & 0
+        \end{array}\right]
+    \end{multline}
+    
+    
+    \question
+    Given
+    \begin{align}
+        (I-xy^T)^{-1}&=(I+xy^T)\\
+        (I-xy^T)(I-xy^T)^{-1}&=(I-xy^T)(I+xy^T)\\
+        (I-xy^T)(I-xy^T)^{-1}&=I^2-xy^T+xy^T+(xy^T)^2\\
+        I&=I+x(y^Tx)y^T\\
+        0&=x(y^Tx)y^T\label{eq25}
+        % x^Ty &=a_1 b_1 +a_2 b_2 + a_3 b_3 + a_4 b_4\\
+        % y^Tx &=a_1 b_1 +a_2 b_2 + a_3 b_3 + a_4 b_4\\
+        % x^Ty &=0
+    \end{align}
+    % , it follows that
+    % \begin{equation}
+    %     y^Tx=x^Ty=0
+    % \end{equation}
+    % By eq. (24),
+    % it is not hard to find that
+    % \begin{align}
+    %     (I-xy^T)^{-1}&=(I+xy^T)\\
+    %     ((I-xy^T)^{-1})^T&=((I+xy^T))^T
+    % \end{align}
+    if $y^Tx=0$, then \cref{eq25} is true. 
+    \question
+    \begin{equation}
+        C^n=B^{-1}ABB^{-1}AB\dots B^{-1}ABB^{-1}AB=B^{-1}\underbrace{A\dots A}_{\text{n times}}B=B^{-1}A^nB
+    \end{equation}
 \end{document}
 
