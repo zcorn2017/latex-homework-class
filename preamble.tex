@@ -1,3 +1,39 @@
+\usepackage{cleveref}
+
+\usepackage{graphicx} % images
+\setkeys{Gin}{width=0.6\linewidth}
+\usepackage{wrapfig} % figure wrapped by texts
+\usepackage{soul} % \ul
+\usepackage{mathrsfs} % mathsrc
+\usepackage{caption} % caption*
+
+
+\usepackage{linegoal} % \linegoal returns left width in a line
+\usepackage{booktabs} % \toprule in tabular
+\usepackage[d]{esvect} % \vv for vec
+
+\usepackage{tikz} % tikz
+%\usepackage{tikzit} % with tikzit app
+
+% \usepackage{courier} % font
+% \usepackage{listings} % font for code
+% \lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+% \lstset{framextopmargin=50pt,frame=bottomline}
+% \usepackage[cache=false]{minted} % minted setup to include code
+%\renewcommand{\MintedPygmentize}{/home/jpl/anaconda3/bin/pygmentize}
+% \renewcommand{\MintedPygmentize}{/Users/jacky/anaconda3/bin/pygmentize}
+% \setminted[python]{linenos, tabsize=2, breaklines}
+
+% for pseudo code
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{chngcntr} % for counterwithin
+\usepackage{calc} % get width of contents
+
+
+
+
 % DEFINE ADDITIONAL MACROS
 \newcommand\note{\textit{Note:\hspace{0.75cm}}}
 \newcommand{\TODO}{\colorbox{red}{NOT DOING YET!}}
@@ -14,6 +50,8 @@
 % Used for automatic embracing the text with brackets
 \usepackage{xstring}
 
+
+
 % DEFINE MATH MACROS
 % \newcommand{\qed}{\hfill\rule{2mm}{2mm}}
 \DeclareMathOperator*{\argmax}{arg\,max}
@@ -26,7 +64,7 @@
 
 
 % Other commands
-\newcommand\st{\quad\text{s.t.}\quad}
+\renewcommand\st{\quad\text{s.t.}\quad}
 \newcommand\E{\mathbb{E}} % expectation
 \newcommand\F{\mathbb{F}} % fields
 \newcommand\R{\mathbb{R}} % real
@@ -101,3 +139,7 @@
 \else%
     #1^T%
 \fi} % transpose
+\newcommand{\hlight}[1]{%
+  \ooalign{\hss\makebox[0pt]{\fcolorbox{green!30}{red!40}{$#1$}}\hss\cr\phantom{$#1$}}%
+} % Highlight the element
+\graphicspath{ {./images/} }
