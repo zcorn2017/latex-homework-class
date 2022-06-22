@@ -1,0 +1,139 @@
+\documentclass[11pt]{homework}
+
+% TODO: replace these with your information
+\newcommand{\hwname}{Yuming Zhou}
+\newcommand{\hwemail}{\href{mailto://121050081@link.cuhk.edu.cn}{121050081@link.cuhk.edu.cn}}
+\newcommand{\hwtype}{Homework}
+\newcommand{\hwnum}{2}
+\newcommand{\hwclass}{MAT2040-T13}
+\newcommand{\hwlecture}{0}
+\newcommand{\hwsection}{Z}
+
+\input{preamble}
+
+\begin{document}
+\maketitle
+
+% Your content
+    \question
+    \begin{multline}
+        \left[\begin{array}{cc|cc}
+            2 & 4 & 1 & 0 \\ 
+            3 & 1 & 0 & 1
+        \end{array}\right]
+        \to
+        \left[\begin{array}{cc|cc}
+            1 & \frac{1}{3} & 0 & \frac{1}{3} \\ 
+            1 & 2 & \frac{1}{2} & 0
+        \end{array}\right]
+        \to
+        \left[\begin{array}{cc|cc}
+        1 & \frac{1}{3} & 0 & \frac{1}{3} \\ 
+        0 & \frac{5}{3} & \frac{1}{2} & -\frac{1}{3}
+        \end{array}\right]\\
+        \to
+        \left[\begin{array}{cc|cc}
+        1 & \frac{1}{3} & 0 & \frac{1}{3} \\ 
+        0 & \frac{1}{3} & \frac{1}{10} & -\frac{1}{15}
+        \end{array}\right]
+        \to
+        \left[\begin{array}{cc|cc}
+        1 & 0 & -\frac{1}{10} & \frac{6}{15} \\ 
+        0 & 1 & \frac{3}{10} & -\frac{1}{5}
+        \end{array}\right]
+        \to
+        \left[\begin{array}{cc|cc}
+        1 & 0 & -\frac{1}{10} & \frac{2}{5} \\ 
+        0 & 1 & \frac{3}{10} & -\frac{1}{5}
+        \end{array}\right]
+    \end{multline}
+    \question
+    \begin{multline}
+        \left[\begin{array}{ccc|ccc}
+        1 & 4 & 3 & 1 & 0 & 0 \\ 
+        -1 & -2 & 0 & 0 & 1 & 0 \\ 
+        2 & 2 & 3 & 0 & 0 & 1
+        \end{array}\right]\to
+        \left[\begin{array}{ccc|ccc}
+        1 & 4 & 3 & 1 & 0 & 0 \\ 
+        0 & 2 & 3 & 0 & 1 & 0 \\ 
+        0 & 0 & -3 & -\frac{1}{2} & -\frac{3}{2} & -\frac{1}{2}
+        \end{array}\right]\to\\
+        \left[\begin{array}{ccc|ccc}
+        1 & 4 & 0 & \frac{1}{2} & -\frac{3}{2} & -\frac{1}{2} \\ 
+        0 & 2 & 0 & \frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} \\ 
+        0 & 0 & 1 & \frac{1}{6} & \frac{1}{2} & \frac{1}{6}
+        \end{array}\right]\to
+        \left[\begin{array}{ccc|ccc}
+        1 & 4 & 0 & \frac{1}{2} & -\frac{3}{2} & -\frac{1}{2} \\ 
+        0 & -4 & 0 & -1 & 1 & 1 \\ 
+        0 & 0 & 1 & \frac{1}{6} & \frac{1}{2} & \frac{1}{6}
+        \end{array}\right]\to\\
+        \left[\begin{array}{ccc|ccc}
+        1 & 0 & 0 & -\frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} \\ 
+        0 & 1 & 0 & \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4} \\ 
+        0 & 0 & 1 & \frac{1}{6} & \frac{1}{2} & \frac{1}{6}
+        \end{array}\right]
+    \end{multline}
+    \begin{equation}
+        S=
+        \left[\begin{array}{ccc}
+            -\frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} \\ 
+            \frac{1}{4} & -\frac{1}{4} & -\frac{1}{4} \\ 
+            \frac{1}{6} & \frac{1}{2} & \frac{1}{6}
+            \end{array}\right]
+            \begin{pmatrix}
+            12 \\ 
+            -12 \\ 
+            8
+            \end{pmatrix}=
+            \begin{pmatrix}
+            4 \\ 
+            4 \\ 
+            -\frac{8}{3}
+            \end{pmatrix}
+    \end{equation}
+    \question
+    \begin{equation}
+        E_3 E_2 E_1A=
+        \left[\begin{array}{ccc}
+        1 & 0 & 0 \\ 
+        0 & 1 & 0 \\ 
+        0 & -2 & 1
+        \end{array}\right]
+        \left[\begin{array}{ccc}
+        1 & 0 & 0 \\ 
+        0 & 1 & 0 \\ 
+        -3 & 0 & 1
+        \end{array}\right]
+        \left[\begin{array}{ccc}
+        1 & 0 & 0 \\ 
+        -2 & 1 & 0 \\ 
+        0 & 0 & 1
+        \end{array}\right]
+        \left[\begin{array}{ccc}
+        1 & 0 & 1 \\ 
+        2 & 2 & 2 \\ 
+        3 & 4 & 5
+        \end{array}\right]
+    \end{equation}
+    \question
+    To prove
+    % $$
+    \begin{gather}
+        M=ABC \text{ is invertible} \label{eq5}\\
+        \iff\nonumber\\
+        A,B,C \text{ are all invertible}\label{eq6}
+    \end{gather}
+    % $$
+    From \cref{eq5} to \cref{eq6}:
+    \begin{equation}
+        OK
+    \end{equation}
+    From \cref{eq6} to \cref{eq5}:
+    \begin{align}
+        A\ivt{A}\ivt{B}B\ivt{C}C&=I^3\\
+        
+    \end{align}
+\end{document}
+

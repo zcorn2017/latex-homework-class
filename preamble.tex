@@ -50,7 +50,8 @@
 % Used for automatic embracing the text with brackets
 \usepackage{xstring}
 
-
+% use \centernot to negate any symbol
+\usepackage{centernot}
 
 % DEFINE MATH MACROS
 % \newcommand{\qed}{\hfill\rule{2mm}{2mm}}
@@ -139,6 +140,15 @@
 \else%
     #1^T%
 \fi} % transpose
+
+\newcommand{\ivt}[1]{%
+\StrLen{#1}[\mylength]%
+\ifnum\mylength>1%
+    (#1)^{-1}%
+\else%
+    #1^{-1}%
+\fi} % invert
+
 \newcommand{\hlight}[1]{%
   \ooalign{\hss\makebox[0pt]{\fcolorbox{green!30}{red!40}{$#1$}}\hss\cr\phantom{$#1$}}%
 } % Highlight the element
